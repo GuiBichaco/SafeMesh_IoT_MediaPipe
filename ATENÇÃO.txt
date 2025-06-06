@@ -4,6 +4,6 @@ iniciar o servidor da api:
 
 uvicorn api_defesa_civil:app --reload --host 127.0.0.1 --port 8000
 
-python Teste2.py
+python MediaPipe.py
 
 streamlit run app.py

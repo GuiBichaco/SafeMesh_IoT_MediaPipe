@@ -1,3 +1,8 @@
+
+Libs necessárias:
+
+Instalar via terminal da aplicação com o "pip install" na frente e as libs abaixo em seguida. Ex: pip install pandas
+
 streamlit
 requests
 python-dotenv
