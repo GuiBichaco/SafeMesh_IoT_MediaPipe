@@ -4,3 +4,14 @@ python-dotenv
 pandas
 streamlit-folium
 folium
+python-multipart
+opencv-python mediapipe numpy requests
+opencv-python mediapipe
+pybluez
+requests geocoder
+PySimpleGUI
+fastapi uvicorn
+fastapi uvicorn python-jose[cryptography] requests
+python-multipart
+python-jose[cryptography]
+streamlit-autorefresh

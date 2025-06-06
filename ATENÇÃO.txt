@@ -1,28 +1,7 @@
-ABRI COM ANACONDA NAVIGATOR 
-
-DEPENDENCIA:
-
-pip install opencv-python mediapipe
-
-pip install opencv-python mediapipe numpy requests
-pip install pybluez
-pip install requests geocoder
-pip install PySimpleGUI
-pip install fastapi uvicorn
-pip install fastapi uvicorn python-jose[cryptography] requests
-pip install python-multipart
-pip install python-jose[cryptography]
-
-
-
-conda activate base  # ou o nome do seu ambiente
-pip install streamlit-autorefresh
-
-
+ABRIR COM ANACONDA NAVIGATOR 
 
 iniciar o servidor da api:
 
-uvicorn api_defesa_civil:app --reload
 uvicorn api_defesa_civil:app --reload --host 127.0.0.1 --port 8000
 
 python Teste2.py
