@@ -8,14 +8,14 @@ import folium
 import altair as alt
 from streamlit_autorefresh import st_autorefresh
 
-# ✅ Configuração inicial
+# Configuração inicial
 st.set_page_config(page_title="Painel de Alertas", layout="wide")
 
-# ✅ Usuário e senha pré-definidos
+# Usuário e senha pré-definidos
 USUARIO_PRE_DEFINIDO = "admin"
 SENHA_PRE_DEFINIDA = "1234"
 
-# ✅ Inicializa o estado da sessão para login
+# Inicializa o estado da sessão para login
 if "logado" not in st.session_state:
     st.session_state.logado = False
 
@@ -25,7 +25,7 @@ def realizar_logout():
     st.session_state.usuario = None
     st.rerun()
 
-# ✅ Tela de Login
+# Tela de Login
 if not st.session_state.logado:
     st.title("🔐 Login")
 
@@ -36,26 +36,26 @@ if not st.session_state.logado:
         if username == USUARIO_PRE_DEFINIDO and password == SENHA_PRE_DEFINIDA:
             st.session_state.logado = True
             st.session_state.usuario = username
-            st.success("✅ Login bem-sucedido! Redirecionando...")
+            st.success("Login bem-sucedido! Redirecionando...")
             st.rerun()
         else:
             st.error("❌ Usuário ou senha incorretos.")
 
     st.stop()  # Interrompe o código caso o usuário não esteja logado
 
-# ✅ Botão para Logout
+# Botão para Logout
 st.sidebar.button("🚪 Sair", on_click=realizar_logout)
 
-# ✅ Carrega variáveis do .env
+# Carrega variáveis do .env
 load_dotenv()
 API_REPORT = "http://127.0.0.1:8000/reportar_localizacao"
 
-# ✅ Auto-refresh a cada 60s
+# Auto-refresh a cada 60s
 auto_refresh = st.sidebar.checkbox("🔄 Atualizar automaticamente a cada 60s", value=True)
 if auto_refresh:
     st_autorefresh(interval=60_000, key="painel_autorefresh")
 
-# ✅ Função para obter geolocalização real via IP
+# Função para obter geolocalização real via IP
 @st.cache_data(ttl=300)
 def get_geolocation_por_ip():
     try:
@@ -69,13 +69,13 @@ def get_geolocation_por_ip():
     except:
         return -23.5, -46.6  # fallback
 
-# ✅ Título
+# Título
 st.title("🚨 Painel de Monitoramento de Alertas")
 
-# ✅ Obter localização atual
+# Obter localização atual
 latitude_centro, longitude_centro = get_geolocation_por_ip()
 
-# ✅ Conteúdo principal
+# Conteúdo principal
 with st.container():
     response = requests.get(API_REPORT)
     if response.status_code == 200:
