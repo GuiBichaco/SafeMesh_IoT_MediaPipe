@@ -1,4 +1,3 @@
-````markdown
 # 🛡️ SafeMesh – Painel de Monitoramento de Alertas em Tempo Real
 
 **SafeMesh** é um painel interativo desenvolvido com **Streamlit** para o monitoramento de alertas em tempo real, pensado para auxiliar a **Defesa Civil**, principalmente em situações de emergência como **enchentes, apagões e desastres naturais**.
@@ -124,5 +123,5 @@ Se tiver dúvidas, sugestões ou quiser contribuir, entre em contato:
 
 > “Tecnologia salva vidas. SafeMesh conecta socorro, dados e ação.”
 
-```
+
 
